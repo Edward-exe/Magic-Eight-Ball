@@ -1,6 +1,7 @@
-let userName = 'Edward';
+function magicEightBall(){
+    let userName = document.getElementById("name").value;
 console.log(userName ? `Hello,${userName}!` : 'Hello!');
-let userQuestion = 'Will I ever get less shit at javascript?';
+let userQuestion = document.getElementById("question").value;;
 console.log(`${userName} asked :"${userQuestion}"`);
 let randomNumber = Math.floor(Math.random() * 7);
 let eightBall = '';
@@ -31,4 +32,6 @@ switch (randomNumber) {
         break;
 }
 console.log(eightBall)
-
+document.getElementById("yourName").innerText = userName
+document.getElementById("yourResult").innerText = eightBall
+}
